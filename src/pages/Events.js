@@ -13,9 +13,7 @@ const Events = () => {
 
 
   useEffect(() => {
-    if (eventData && filteredEvents !== eventData) {
-      setFilteredEvents(eventData);
-    }
+      setFilteredEvents(eventData)
   }, [eventData]);
 
   // Handle type filter
@@ -27,7 +25,7 @@ const Events = () => {
           : eventData.filter((event) => event.type === selectedType)
       );
     }
-  }, [selectedType, isSearchActive]);
+  }, [selectedType, isSearchActive, eventData]);
 
   // Handle search button click
   const handleSearch = () => {
